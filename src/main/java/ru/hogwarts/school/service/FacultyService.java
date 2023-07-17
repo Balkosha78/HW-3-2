@@ -29,9 +29,7 @@ public class FacultyService {
     public void deleteFaculty(long id){
         facultyRepository.deleteById(id);
     }
-   // public Collection<Faculty> getAllFaculties(){
-     //   return faculties.values();
-    //}
+
     public Collection<Faculty> findByColor(String color) {
         return facultyRepository.findAll();
     }

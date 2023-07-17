@@ -1,9 +1,7 @@
 package ru.hogwarts.school.model;
 
-
 import jakarta.persistence.GeneratedValue;
 import org.springframework.data.annotation.Id;
-
 import java.util.Objects;
 
 public class Faculty {

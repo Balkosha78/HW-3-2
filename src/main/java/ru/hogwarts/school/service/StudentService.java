@@ -31,9 +31,7 @@ public class StudentService {
     public void deleteStudent(long id){
         studentRepository.deleteById(id);
     }
-  //  public Collection<Student> getAllStudents(){
-   //     return students.values();
-   // }
+
     public Collection<Student> findByAge(int age) {
         return studentRepository.findAll();
     }
