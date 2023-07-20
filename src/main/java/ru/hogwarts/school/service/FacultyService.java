@@ -9,6 +9,7 @@ import java.util.Collection;
 
 @Service
 public class FacultyService {
+
     @Autowired
     private final FacultyRepository facultyRepository;
 
@@ -21,7 +22,7 @@ public class FacultyService {
        return facultyRepository.save(faculty);
     }
     public Faculty findFaculty(long id){
-        return facultyRepository.findById(id).get();
+        return facultyRepository.findById(id).orElse(null);
     }
     public Faculty editFaculty(Faculty faculty){
         return facultyRepository.save(faculty);
@@ -31,6 +32,6 @@ public class FacultyService {
     }
 
     public Collection<Faculty> findByColor(String color) {
-        return facultyRepository.findAll();
+        return facultyRepository.findByColor(color);
     }
  }
